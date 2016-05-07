@@ -17,7 +17,7 @@ for(j=0;j<i;j++)
 {
   for(sj=0;sj<(i-1);sj++)
   {
-    if(a[sj] > a[sj+1])
+    if(a[sj] > a[sj+1]) //for descending order just check change '>' to '<' it works baby
     {
       te = a[sj];
       a[sj] = a[sj+1];
