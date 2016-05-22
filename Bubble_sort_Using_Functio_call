@@ -1,0 +1,54 @@
+/*Bubble sort using function call*\
+
+#include<stdio.h>
+void bubble_sort(int *, int ) ;
+int main()
+{
+	int i[100];
+	int k=0, n=0, ret =0 ; 
+	char val;
+	/* User enters the numbers*/
+	do
+	{
+		printf("enter the numbers you want to sort\n");
+		scanf("%d", &i[k]);
+		k++;
+		printf("enter another number ? Y/N");
+		scanf(" %c", &val);
+	}
+	while(val == 'y' || val == 'Y');
+	printf(" \nyou entered the following numbers \n");
+	for(n; n<k; n++)
+	{
+		printf("%d\t", i[n]);
+	}
+	
+	/*Sort the Numbers*/
+	bubble_sort(i, k);
+	
+	return 0;
+}
+
+void bubble_sort(int *i, int k)
+{ 
+	int j=0,l=0, m=0, n=k;
+	for(j; j<n ; n--)
+	{
+		for( m=j, l=j+1;m<n && l <n ;m++, l++)
+		{
+			if (i[m]>i[l])
+			{
+				i[m]= i[m]+i[l];
+				i[l]= i[m]-i[l];
+				i[m]= i[m]-i[l];
+			}
+		
+		}	
+	}
+	printf("\nsorted elements are\n");
+	for(j=0; j<k; j++)
+	{
+		printf("%d\t", i[j]);
+	}
+	
+}
