@@ -2,7 +2,7 @@
 void main()
 {
 
- int *p, n =0,ch,j,k,l,temp;
+ int p[100], n =0,ch,j,k,l,temp;
  
  do
  {
